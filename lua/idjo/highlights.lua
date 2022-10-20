@@ -74,7 +74,7 @@ hl.common = {
     SpecialKey = {fg = c.grey},
     Pmenu = {fg = c.fg, bg = c.bg1},
     PmenuSbar = {fg = c.none, bg = c.bg1},
-    PmenuSel = {fg = c.bg0, bg = c.bg_blue},
+    PmenuSel = {fg = c.bg0, bg = c.bg_green},
     WildMenu = {fg = c.bg0, bg = c.blue},
     PmenuThumb = {fg = c.none, bg = c.grey},
     Question = {fg = c.yellow},
@@ -96,7 +96,7 @@ hl.common = {
     Debug = {fg = c.yellow},
     debugPC = {fg = c.bg0, bg = c.green},
     debugBreakpoint = {fg = c.bg0, bg = c.red},
-    ToolbarButton = {fg = c.bg0, bg = c.bg_blue}
+    ToolbarButton = {fg = c.bg0, bg = c.bg_green}
 }
 
 hl.syntax = {
