@@ -197,16 +197,16 @@ hl.treesitter = {
     TSVariableBuiltin = colors.Red
 }
 
-hl.plugins.lsp = {
+--[[ hl.plugins.lsp = {
     LspCxxHlGroupEnumConstant = colors.Orange,
     LspCxxHlGroupMemberVariable = colors.Orange,
     LspCxxHlGroupNamespace = colors.Blue,
     LspCxxHlSkippedRegion = colors.Grey,
     LspCxxHlSkippedRegionBeginEnd = colors.Red,
 
-    LspDiagnosticsDefaultError = {fg = cfg.darker_diagnostics and c.dark_red or c.red},
+    LspDiagnosticsDefaultError = {fg = c.red},
     LspDiagnosticsUnderlineError = {underline = not cfg.diagnostics_undercurl, undercurl = cfg.diagnostics_undercurl, sp = c.red},
-    LspDiagnosticsFloatingError = {fg = cfg.darker_diagnostics and c.dark_red or c.red},
+    LspDiagnosticsFloatingError = {fg = c.red},
 
     LspDiagnosticsDefaultHint = {fg = cfg.darker_diagnostics and c.dark_purple or c.purple},
     LspDiagnosticsUnderlineHint = {underline = not cfg.diagnostics_undercurl, undercurl = cfg.diagnostics_undercurl, sp = c.purple},
@@ -220,7 +220,55 @@ hl.plugins.lsp = {
     LspReferenceText = {underline = true },
     LspReferenceWrite = {underline = true },
     LspReferenceRead = {underline = true }
+} ]]
+
+local diagnostics_error_color = cfg.diagnostics.darker and c.dark_red or c.red
+local diagnostics_hint_color = cfg.diagnostics.darker and c.dark_purple or c.purple
+local diagnostics_warn_color = cfg.diagnostics.darker and c.dark_yellow or c.yellow
+local diagnostics_info_color = cfg.diagnostics.darker and c.dark_cyan or c.cyan
+hl.plugins.lsp = {
+    LspCxxHlGroupEnumConstant = colors.Orange,
+    LspCxxHlGroupMemberVariable = colors.Orange,
+    LspCxxHlGroupNamespace = colors.Blue,
+    LspCxxHlSkippedRegion = colors.Grey,
+    LspCxxHlSkippedRegionBeginEnd = colors.Red,
+
+    DiagnosticError = {fg = c.red},
+    DiagnosticHint = {fg = c.purple},
+    DiagnosticInfo = {fg = c.cyan},
+    DiagnosticWarn = {fg = c.yellow},
+
+    DiagnosticVirtualTextError = { bg = cfg.diagnostics.background and util.darken(diagnostics_error_color, 0.1, c.bg0) or c.none,
+                                   fg = diagnostics_error_color },
+    DiagnosticVirtualTextWarn = { bg = cfg.diagnostics.background and util.darken(diagnostics_warn_color, 0.1, c.bg0) or c.none,
+                                  fg = diagnostics_warn_color },
+    DiagnosticVirtualTextInfo = { bg = cfg.diagnostics.background and util.darken(diagnostics_info_color, 0.1, c.bg0) or c.none,
+                                  fg = diagnostics_info_color },
+    DiagnosticVirtualTextHint = { bg = cfg.diagnostics.background and util.darken(diagnostics_hint_color, 0.1, c.bg0) or c.none,
+                                  fg = diagnostics_hint_color },
+
+    DiagnosticUnderlineError = {fmt = cfg.diagnostics.undercurl and "undercurl" or "underline", sp = c.red},
+    DiagnosticUnderlineHint = {fmt = cfg.diagnostics.undercurl and "undercurl" or "underline", sp = c.purple},
+    DiagnosticUnderlineInfo = {fmt = cfg.diagnostics.undercurl and "undercurl" or "underline", sp = c.blue},
+    DiagnosticUnderlineWarn = {fmt = cfg.diagnostics.undercurl and "undercurl" or "underline", sp = c.yellow},
+
+    LspReferenceText = {fmt = "underline"},
+    LspReferenceWrite = {fmt = "underline"},
+    LspReferenceRead = {fmt = "underline"}
 }
+
+hl.plugins.lsp.LspDiagnosticsDefaultError = hl.plugins.lsp.DiagnosticError
+hl.plugins.lsp.LspDiagnosticsDefaultHint = hl.plugins.lsp.DiagnosticHint
+hl.plugins.lsp.LspDiagnosticsDefaultInformation = hl.plugins.lsp.DiagnosticInfo
+hl.plugins.lsp.LspDiagnosticsDefaultWarning = hl.plugins.lsp.DiagnosticWarn
+hl.plugins.lsp.LspDiagnosticsUnderlineError = hl.plugins.lsp.DiagnosticUnderlineError
+hl.plugins.lsp.LspDiagnosticsUnderlineHint = hl.plugins.lsp.DiagnosticUnderlineHint
+hl.plugins.lsp.LspDiagnosticsUnderlineInformation = hl.plugins.lsp.DiagnosticUnderlineInfo
+hl.plugins.lsp.LspDiagnosticsUnderlineWarning = hl.plugins.lsp.DiagnosticUnderlineWarn
+hl.plugins.lsp.LspDiagnosticsVirtualTextError = hl.plugins.lsp.DiagnosticVirtualTextError
+hl.plugins.lsp.LspDiagnosticsVirtualTextWarning = hl.plugins.lsp.DiagnosticVirtualTextWarn
+hl.plugins.lsp.LspDiagnosticsVirtualTextInformation = hl.plugins.lsp.DiagnosticVirtualTextInfo
+hl.plugins.lsp.LspDiagnosticsVirtualTextHint = hl.plugins.lsp.DiagnosticVirtualTextHint
 
 hl.plugins.whichkey = {
     WhichKey = colors.Red,
