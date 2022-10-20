@@ -1,5 +1,5 @@
 local function get(setting, default)
-    local key = "onedark_" .. setting
+    local key = "idjo_" .. setting
     if vim.g[key] == nil then return default end
     return vim.g[key]
 end

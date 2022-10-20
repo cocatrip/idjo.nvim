@@ -1,5 +1,5 @@
-local c = require('onedark.colors')
-local cfg = require('onedark.config')
+local c = require('idjo.colors')
+local cfg = require('idjo.config')
 
 local M = {}
 local hl = {langs = {}, plugins = {}}

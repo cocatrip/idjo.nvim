@@ -1,6 +1,6 @@
 local M = {}
-local cfg = require('onedark.config')
-local c = require 'onedark.colors'
+local cfg = require('idjo.config')
+local c = require('idjo.colors')
 
 function M.setup()
     if cfg.disable_terminal_colors then return end
