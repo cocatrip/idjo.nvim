@@ -1,32 +1,21 @@
 local c = require('idjo.colors')
 
-local colors = {
-    bg = c.bg_d,
-    fg = c.fg,
-    red = c.red,
-    green = c.green,
-    yellow = c.yellow,
-    blue = c.blue,
-    purple = c.purple,
-    cyan = c.cyan,
-    gray = c.grey
-}
 
-local idjo_lua = {
+local idjo_lualine = {
     inactive = {
-        a = {fg = colors.gray, bg = colors.bg, gui = 'bold'},
-        b = {fg = colors.gray, bg = colors.bg},
-        c = {fg = colors.gray, bg = c.bg_d},
+        a = {fg = c.grey, bg = c.bg_d, gui = 'bold'},
+        b = {fg = c.grey, bg = c.bg_d},
+        c = {fg = c.grey, bg = c.bg_d},
     },
     normal = {
-        a = {fg = colors.bg, bg = colors.green, gui = 'bold'},
-        b = {fg = colors.fg, bg = c.bg3},
-        c = {fg = colors.fg, bg = c.bg_d},
+        a = {fg = c.bg, bg = c.bg2, gui = 'bold'},
+        b = {fg = c.fg, bg = c.bg3},
+        c = {fg = c.fg, bg = c.bg_d},
     },
-    visual = {a = {fg = colors.bg, bg = colors.purple, gui = 'bold'}},
-    replace = {a = {fg = colors.bg, bg = colors.red, gui = 'bold'}},
-    insert = {a = {fg = colors.bg, bg = colors.blue, gui = 'bold'}},
-    command = {a = {fg = colors.bg, bg = colors.yellow, gui = 'bold'}}
+    visual = {a = {fg = c.purple, bg = c.bg, gui = 'bold'}},
+    replace = {a = {fg = c.red, bg = c.bg, gui = 'bold'}},
+    insert = {a = {fg = c.blue, bg = c.bg, gui = 'bold'}},
+    command = {a = {fg = c.yellow, bg = c.bg, gui = 'bold'}}
 }
 
-return idjo_lua;
+return idjo_lualine;

@@ -1,13 +1,10 @@
 local colors = {
         black = '#17191e',
-          -- change
           bg0 = '#293329',
-          -- change
-          bg1 = '#3e473e',
-          bg2 = '#4d525c',
-          bg3 = '#3a4b3a',
+          bg1 = '#435643',
+          bg2 = '#3a4b3a',
+          bg3 = '#313f31',
          bg_d = '#1f281f',
-         -- change
      bg_green = '#738f54',
     bg_yellow = '#ebd09c',
            fg = '#c5cac5',
