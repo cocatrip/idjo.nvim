@@ -5,6 +5,7 @@ local colors = {
     fg = c.fg,
     red = c.red,
     green = c.green,
+    bg_green = c.bg_green,
     yellow = c.yellow,
     blue = c.blue,
     purple = c.purple,
@@ -20,7 +21,7 @@ local idjo_lua = {
     },
     normal = {
         a = {fg = colors.bg, bg = colors.green, gui = 'bold'},
-        b = {fg = colors.fg, bg = c.bg3},
+        b = {fg = colors.fg, bg = c.bg_green},
         c = {fg = colors.fg, bg = c.bg_d},
     },
     visual = {a = {fg = colors.bg, bg = colors.purple, gui = 'bold'}},
