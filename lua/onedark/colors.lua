@@ -30,18 +30,4 @@ local colors = {
     diff_text = '#2c5372'
 }
 
-
--- local styles = { dark = 1 }
-
-local function select_colors()
-    -- local index = styles[vim.g.onedark_style]
-    local selected = {}
-    for k, v in pairs(colors)
-    do 
-      selected[k] = v[1] 
-    end
-		-- selected['none'] = 'NONE'
-    return selected
-end
-
 return colors
