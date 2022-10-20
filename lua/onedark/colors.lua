@@ -31,12 +31,12 @@ local colors = {
 }
 
 
-local styles = { dark = 1 }
+-- local styles = { dark = 1 }
 
 local function select_colors()
-    local index = styles[vim.g.onedark_style]
+    -- local index = styles[vim.g.onedark_style]
     local selected = {}
-    for k, v in pairs(colors) do selected[k] = v[index] end
+    for k, v in pairs(colors) do selected[k] = v[1] end
 		selected['none'] = 'NONE'
     return selected
 end
