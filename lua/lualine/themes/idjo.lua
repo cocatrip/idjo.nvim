@@ -1,7 +1,7 @@
 local c = require('idjo.colors')
 
 local colors = {
-    bg = c.bg0,
+    bg = c.bg_d,
     fg = c.fg,
     red = c.red,
     green = c.green,
