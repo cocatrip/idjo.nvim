@@ -8,14 +8,14 @@ local idjo_lualine = {
         c = {fg = c.grey, bg = c.bg_d},
     },
     normal = {
-        a = {fg = c.bg, bg = c.bg2, gui = 'bold'},
+        a = {fg = c.bg, bg = c.bg1, gui = 'bold'},
         b = {fg = c.fg, bg = c.bg3},
         c = {fg = c.fg, bg = c.bg_d},
     },
-    visual = {a = {fg = c.purple, bg = c.bg, gui = 'bold'}},
-    replace = {a = {fg = c.red, bg = c.bg, gui = 'bold'}},
-    insert = {a = {fg = c.blue, bg = c.bg, gui = 'bold'}},
-    command = {a = {fg = c.yellow, bg = c.bg, gui = 'bold'}}
+    visual  = {a = {fg = c.purple   , bg = c.bg1, gui = 'bold'}},
+    replace = {a = {fg = c.red      , bg = c.bg1, gui = 'bold'}},
+    insert  = {a = {fg = c.blue     , bg = c.bg1, gui = 'bold'}},
+    command = {a = {fg = c.yellow   , bg = c.bg1, gui = 'bold'}}
 }
 
 return idjo_lualine;
