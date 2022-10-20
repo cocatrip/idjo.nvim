@@ -5,7 +5,7 @@ local colors = {
           -- change
           bg1 = '#3e473e',
           bg2 = '#4d525c',
-          bg3 = '#3b3f4c',
+          bg3 = '#3a4b3a',
          bg_d = '#1f281f',
          -- change
      bg_green = '#738f54',
