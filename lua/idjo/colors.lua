@@ -1,7 +1,7 @@
 local colors = {
         black = '#17191e',
           -- change
-          bg0 = '#293329',
+          bg0 = '#1f281f',
           -- change
           bg1 = '#3e473e',
           bg2 = '#4d525c',

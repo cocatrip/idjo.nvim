@@ -1,4 +1,5 @@
 local c = require('idjo.colors')
+
 local colors = {
     bg = c.bg0,
     fg = c.fg,
@@ -27,4 +28,5 @@ local idjo_lua = {
     insert = {a = {fg = colors.bg, bg = colors.blue, gui = 'bold'}},
     command = {a = {fg = colors.bg, bg = colors.yellow, gui = 'bold'}}
 }
+
 return idjo_lua;
